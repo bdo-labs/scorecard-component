@@ -1,1 +1,54 @@
-describe('scorecard', function(){});
+describe('scorecard', function(){
+
+	var MockService = {
+		get: function () {
+			return {
+				
+			};
+		}
+	}
+
+	beforeEach(module('scorecard'));
+	
+	var el,
+			scope,
+			httpBackend;
+
+	beforeEach(module(function ($provide) {
+		$provide.value('scorecardService', MockService);
+	}))
+
+	beforeEach(inject(function ($rootScope, $compile, $httpBackend){
+		scope = $rootScope.$new();
+		httpBackend = $httpBackend;
+	}))
+
+
+	function compileDirective(tpl){
+		if (!tpl) tpl = '<div scorecard-module scorecard-type="\'summary\'" department-id="2"></div>';
+
+		inject(function ($compile) {
+			el = $compile(tpl)(scope)[0];
+		})
+		scope.$digest();
+	}
+
+
+	describe('initialisation', function () {
+		beforeEach(function () {
+			compileDirective();
+		});
+
+		it('should have a child with scorecard class', function () {
+			expect(el.firstElementChild.classList.contains('scorecard')).toBe(true);
+		});
+
+		it('should choose the right scorecard type', function () {
+			expect(el.firstElementChild.classList.contains('scorecard-summary')).toBe(true);
+		});
+
+		it('should note the departmentId', function () {
+			expect(angular.element(el).isolateScope().departmentId).toEqual(2);
+		});
+	});
+});
