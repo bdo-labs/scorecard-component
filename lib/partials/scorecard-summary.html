@@ -1,0 +1,27 @@
+<section class="interactive-box scorecard scorecard-summary">
+
+	<h1><a app-ref="department/{{department.id}}">{{department.name}}</a></h1>
+
+	<div class="action-button edit">
+		<span class="text">Rediger</span> <i class="fa fa-fw fa-pencil"></i>
+	</div>
+
+	<div class="categories">
+		<h3><a app-ref="department/{{department.id}}">Målstyring</a></h3>
+		<ul class="fa-ul">
+			<li class="category" ng-repeat="category in categories | orderBy:'id'"><i class="fa-li fa fa-circle status-color {{category.status}}"></i>{{category.name}}</li>
+		</ul>
+	</div>
+	
+	<div class="overview-stat">
+		<h3><a app-ref="department/{{department.id}}">Tiltak</a></h3>
+		<div class="chart"></div>
+		<div class="description">
+			<div>Status tiltak</div>
+			<div><span class="status-color good">17</span> / <span class="status-color warning">5</span> / <span class="status-color danger">2</span></div>
+		</div>
+	</div>
+	
+	<p class="slogan">{{department.slogan}}</p>
+
+</section>

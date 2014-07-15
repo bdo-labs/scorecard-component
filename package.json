@@ -5,6 +5,9 @@
 	"main": "lib/index.js",
 	"repository": "git://github.com/bdo-labs/scorecard.git",
 	"license": "MIT",
+	"dependencies": {
+		"services": "git+https://edbdo.visualstudio.com/DefaultCollection/BDO%20Labs/_git/Services"
+	},
 	"scripts": {
 		"test": "karma start"
 	},
