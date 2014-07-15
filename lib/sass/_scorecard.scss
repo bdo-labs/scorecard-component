@@ -1,0 +1,151 @@
+.scorecard {
+	h1, h2, h3, h4 {
+		> a {
+			text-decoration: none;
+			color: $strategi-color;
+		}
+	}
+
+	h2, h3, h4 {
+		> a {
+			color: black;
+		}
+	}
+}
+
+// Full-size scorecard styles
+.scorecard-full {
+	position: relative;
+
+	.action-button {
+		&.add {
+			position: absolute;
+			top: 35px;
+			right: 20px;
+		}
+	}
+
+	.category {
+		width: 50%;
+		display: inline-block;
+		vertical-align: top;
+
+		.table {			
+			width: 90%;
+			margin: 20px auto;
+		}
+
+		thead {
+			font-size: medium;
+
+			.name {
+				font-size: 1.3em;
+				color: black;
+			}
+
+			th {
+				font-weight: normal;
+				text-align: left;
+				vertical-align: bottom;
+			}
+			
+			th:first-child {
+				font-size: 125%;
+			}
+			
+		}
+		
+		td > .fa-stack {
+			font-size: 0.7em;
+		}
+
+		th:first-child, td:first-child {
+			text-align: center;
+		}
+
+		th:last-child, td:last-child {
+			color: grey;
+		}
+		
+	}
+}
+
+
+// Scorecard overview (fun-fact type) styles
+.scorecard-overview {
+
+	font-size: 14px;
+	
+	// Elements
+	.overview-stat {
+		display: inline-block;
+		text-align: center;
+		width: 49%;
+		
+		.visual {
+			font-size: 4em;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		.description {
+			font-size: 110%;
+			font-weight: normal;
+		}
+	}
+}
+
+
+// Summary-style scorecard
+.scorecard-summary {
+	position: relative;
+
+	.action-button {
+		&.edit {
+			position: absolute;
+			top: 35px;
+			right: 20px;
+		}
+	}
+
+	h3 {
+		margin-bottom: 0;
+	}
+	
+	.slogan {
+		clear: left;
+		padding-top: 20px;
+		font-size: medium;
+		color: $module-text-color;
+	}
+
+	.overview-stat {
+		margin-left: 100px;
+		float: left;
+		text-align: center;
+
+		.chart {
+			height: 100px;
+			width: 100px;
+
+			/**
+			 * Using placeholder div until we choose
+			 * a chart library.
+			 */
+			border: solid 1px black;
+		}
+	}
+
+	.categories {
+		> h3 {
+			margin-left: 35px;	
+		}
+		
+		float: left;
+		font-size: medium;
+	}
+
+	.category {
+		margin-bottom: 10px;
+	}
+}

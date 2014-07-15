@@ -1,0 +1,135 @@
+/* line 3, sass/_scorecard.scss */
+.scorecard h1 > a, .scorecard h2 > a, .scorecard h3 > a, .scorecard h4 > a {
+  text-decoration: none;
+  color: #2eafa4;
+}
+/* line 10, sass/_scorecard.scss */
+.scorecard h2 > a, .scorecard h3 > a, .scorecard h4 > a {
+  color: black;
+}
+
+/* line 17, sass/_scorecard.scss */
+.scorecard-full {
+  position: relative;
+}
+/* line 21, sass/_scorecard.scss */
+.scorecard-full .action-button.add {
+  position: absolute;
+  top: 35px;
+  right: 20px;
+}
+/* line 28, sass/_scorecard.scss */
+.scorecard-full .category {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 33, sass/_scorecard.scss */
+.scorecard-full .category .table {
+  width: 90%;
+  margin: 20px auto;
+}
+/* line 38, sass/_scorecard.scss */
+.scorecard-full .category thead {
+  font-size: medium;
+}
+/* line 41, sass/_scorecard.scss */
+.scorecard-full .category thead .name {
+  font-size: 1.3em;
+  color: black;
+}
+/* line 46, sass/_scorecard.scss */
+.scorecard-full .category thead th {
+  font-weight: normal;
+  text-align: left;
+  vertical-align: bottom;
+}
+/* line 52, sass/_scorecard.scss */
+.scorecard-full .category thead th:first-child {
+  font-size: 125%;
+}
+/* line 58, sass/_scorecard.scss */
+.scorecard-full .category td > .fa-stack {
+  font-size: 0.7em;
+}
+/* line 62, sass/_scorecard.scss */
+.scorecard-full .category th:first-child, .scorecard-full .category td:first-child {
+  text-align: center;
+}
+/* line 66, sass/_scorecard.scss */
+.scorecard-full .category th:last-child, .scorecard-full .category td:last-child {
+  color: grey;
+}
+
+/* line 75, sass/_scorecard.scss */
+.scorecard-overview {
+  font-size: 14px;
+}
+/* line 80, sass/_scorecard.scss */
+.scorecard-overview .overview-stat {
+  display: inline-block;
+  text-align: center;
+  width: 49%;
+}
+/* line 85, sass/_scorecard.scss */
+.scorecard-overview .overview-stat .visual {
+  font-size: 4em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 91, sass/_scorecard.scss */
+.scorecard-overview .overview-stat .description {
+  font-size: 110%;
+  font-weight: normal;
+}
+
+/* line 100, sass/_scorecard.scss */
+.scorecard-summary {
+  position: relative;
+}
+/* line 104, sass/_scorecard.scss */
+.scorecard-summary .action-button.edit {
+  position: absolute;
+  top: 35px;
+  right: 20px;
+}
+/* line 111, sass/_scorecard.scss */
+.scorecard-summary h3 {
+  margin-bottom: 0;
+}
+/* line 115, sass/_scorecard.scss */
+.scorecard-summary .slogan {
+  clear: left;
+  padding-top: 20px;
+  font-size: medium;
+  color: #878787;
+}
+/* line 122, sass/_scorecard.scss */
+.scorecard-summary .overview-stat {
+  margin-left: 100px;
+  float: left;
+  text-align: center;
+}
+/* line 127, sass/_scorecard.scss */
+.scorecard-summary .overview-stat .chart {
+  height: 100px;
+  width: 100px;
+  /**
+   * Using placeholder div until we choose
+   * a chart library.
+   */
+  border: solid 1px black;
+}
+/* line 139, sass/_scorecard.scss */
+.scorecard-summary .categories {
+  float: left;
+  font-size: medium;
+}
+/* line 140, sass/_scorecard.scss */
+.scorecard-summary .categories > h3 {
+  margin-left: 35px;
+}
+/* line 148, sass/_scorecard.scss */
+.scorecard-summary .category {
+  margin-bottom: 10px;
+}
