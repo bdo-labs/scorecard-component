@@ -11,8 +11,8 @@ describe('scorecard', function(){
 	beforeEach(module('scorecard'));
 	
 	var el,
-			scope,
-			httpBackend;
+		scope,
+		httpBackend;
 
 	beforeEach(module(function ($provide) {
 		$provide.value('scorecardService', MockService);
@@ -25,7 +25,7 @@ describe('scorecard', function(){
 
 
 	function compileDirective(tpl){
-		if (!tpl) tpl = '<div scorecard-module scorecard-type="\'summary\'" department-id="2"></div>';
+		if (!tpl) tpl = '<div scorecard-module scorecard-type="\'summary\'" scorecard-id="2"></div>';
 
 		inject(function ($compile) {
 			el = $compile(tpl)(scope)[0];
@@ -47,8 +47,8 @@ describe('scorecard', function(){
 			expect(el.firstElementChild.classList.contains('scorecard-summary')).toBe(true);
 		});
 
-		it('should note the departmentId', function () {
-			expect(angular.element(el).isolateScope().departmentId).toEqual(2);
+		it('should note the scorecardId', function () {
+			expect(angular.element(el).isolateScope().scorecardId).toEqual(2);
 		});
 	});
 });

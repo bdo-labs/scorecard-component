@@ -1,13 +1,13 @@
 <section class="interactive-box scorecard scorecard-summary">
 
-	<h1><a app-ref="department/{{department.id}}">{{department.name}}</a></h1>
+	<h1><a app-ref="scorecard/{{scorecard.id}}">{{scorecard.name}}</a></h1>
 
 	<div class="action-button edit">
 		<span class="text">Rediger</span> <i class="fa fa-fw fa-pencil"></i>
 	</div>
 
 	<div class="categories">
-		<h3><a app-ref="department/{{department.id}}">Målstyring</a></h3>
+		<h3><a app-ref="scorecard/{{scorecard.id}}">Målstyring</a></h3>
 		<ul class="fa-ul">
 			<li class="category" ng-repeat="category in scorecard.categories | orderBy:'id'">
 				<span class="fa-stack fa-li">
@@ -20,7 +20,7 @@
 	</div>
 	
 	<div class="overview-stat">
-		<h3><a app-ref="department/{{department.id}}">Tiltak</a></h3>
+		<h3><a app-ref="scorecard/{{scorecard.id}}">Tiltak</a></h3>
 		<div class="chart"></div>
 		<div class="description">
 			<div>Status tiltak</div>
@@ -28,6 +28,6 @@
 		</div>
 	</div>
 	
-	<p class="slogan">{{department.slogan}}</p>
+	<p class="slogan">{{scorecard.description}}</p>
 
 </section>
