@@ -129,7 +129,11 @@
 .scorecard-summary .categories > h3 {
   margin-left: 35px;
 }
-/* line 148, sass/_scorecard.scss */
+/* line 147, sass/_scorecard.scss */
+.scorecard-summary .categories .fa-stack {
+  font-size: 0.7em;
+}
+/* line 152, sass/_scorecard.scss */
 .scorecard-summary .category {
   margin-bottom: 10px;
 }

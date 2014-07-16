@@ -9,7 +9,13 @@
 	<div class="categories">
 		<h3><a app-ref="department/{{department.id}}">Målstyring</a></h3>
 		<ul class="fa-ul">
-			<li class="category" ng-repeat="category in scorecard.categories | orderBy:'id'"><i class="fa-li fa fa-circle status-color {{category.status}}"></i>{{category.name}}</li>
+			<li class="category" ng-repeat="category in scorecard.categories | orderBy:'id'">
+				<span class="fa-stack fa-li">
+					<i class="fa fa-fw fa-stack-2x fa-circle status-color {{category.status}}"></i>
+					<i class="fa fa-fw fa-stack-1x {{category.trend | numToTrend | termToIcon}} fa-inverse"></i>
+				</span>
+				{{category.name}}
+			</li>
 		</ul>
 	</div>
 	
