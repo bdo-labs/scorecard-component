@@ -1,0 +1,33 @@
+<section class="interactive-box scorecard scorecard-summary">
+
+	<h1><a app-ref="scorecard/{{scorecard.id}}">{{scorecard.name}}</a></h1>
+
+	<div class="action-button main-action">
+		<i class="fa fa-fw fa-pencil"></i>
+	</div>
+
+	<div class="categories">
+		<h3><a app-ref="scorecard/{{scorecard.id}}">Målstyring</a></h3>
+		<ul class="fa-ul">
+			<li class="category" ng-repeat="category in scorecard.categories | orderBy:'id'">
+				<span class="fa-stack fa-li">
+					<i class="fa fa-fw fa-stack-2x fa-circle status-color {{category.status}}"></i>
+					<i class="fa fa-fw fa-stack-1x {{category.trend | numToTrend | termToIcon}} fa-inverse"></i>
+				</span>
+				{{category.name}}
+			</li>
+		</ul>
+	</div>
+	
+	<div class="overview-stat">
+		<h3><a app-ref="scorecard/{{scorecard.id}}">Tiltak</a></h3>
+		<div class="chart"></div>
+		<div class="description">
+			<div>Status tiltak</div>
+			<div><span class="status-color good">17</span> / <span class="status-color warning">5</span> / <span class="status-color danger">2</span></div>
+		</div>
+	</div>
+	
+	<p class="slogan">{{scorecard.description}}</p>
+
+</section>

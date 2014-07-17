@@ -3,8 +3,13 @@
 	"version": "0.0.0",
 	"description": "A scorecard module",
 	"main": "lib/index.js",
+	"style": "lib/main.css",
 	"repository": "git://github.com/bdo-labs/scorecard.git",
 	"license": "MIT",
+	"dependencies": {
+		"services": "git+https://edbdo.visualstudio.com/DefaultCollection/BDO%20Labs/_git/Services",
+		"filters": "git+ssh://git@github.com:bdo-labs/filters.git"
+	},
 	"scripts": {
 		"test": "karma start"
 	},
@@ -12,6 +17,14 @@
 		"js": {
 			"entry": "lib/index.js",
 			"output": "build/build.js"
+		},
+		"css": {
+			"entry": "index.css",
+			"output": "build/bundle.css",
+			"assets": {
+				"dest": "build/assets/",
+				"prefix": "assets/"
+			}
 		}
 	},
 	"browserify": {
@@ -26,6 +39,7 @@
 		"browserify": "^4.2.0",
 		"karma": "^0.12.16",
 		"karma-browserifast": "^0.6.1",
-		"karma-jasmine": "^0.1.5"
+		"karma-jasmine": "^0.1.5",
+		"styles": "git+ssh://git@github.com:bdo-labs/styles.git#port-scorecard"
 	}
 }
