@@ -63,47 +63,58 @@
   font-weight: normal;
 }
 
-/* line 81, sass/_scorecard.scss */
-.scorecard-summary h3 {
-  margin-bottom: 0;
+/* line 82, sass/_scorecard.scss */
+.scorecard-summary h2 {
+  margin-bottom: 10px;
 }
-/* line 85, sass/_scorecard.scss */
+/* line 86, sass/_scorecard.scss */
 .scorecard-summary .slogan {
-  clear: left;
+  clear: both;
   padding-top: 20px;
   font-size: medium;
-  color: #878787;
 }
 /* line 92, sass/_scorecard.scss */
-.scorecard-summary .overview-stat {
-  margin-left: 100px;
-  float: left;
+.scorecard-summary .chart-component {
+  margin-right: 50px;
+  float: right;
   text-align: center;
 }
 /* line 97, sass/_scorecard.scss */
-.scorecard-summary .overview-stat .chart {
-  height: 100px;
-  width: 100px;
+.scorecard-summary .chart-component .chart {
+  height: 90px;
+  width: 90px;
   /**
    * Using placeholder div until we choose
    * a chart library.
    */
   border: solid 1px black;
-}
-/* line 109, sass/_scorecard.scss */
-.scorecard-summary .categories {
-  float: left;
-  font-size: medium;
+  border-radius: 50%;
+  background: #708e50;
 }
 /* line 110, sass/_scorecard.scss */
-.scorecard-summary .categories > h3 {
+.scorecard-summary .chart-component .description {
+  margin-top: 1em;
+}
+/* line 115, sass/_scorecard.scss */
+.scorecard-summary .categories {
+  float: left;
+}
+/* line 116, sass/_scorecard.scss */
+.scorecard-summary .categories > h2 {
   margin-left: 35px;
 }
-/* line 117, sass/_scorecard.scss */
-.scorecard-summary .categories .fa-stack {
-  font-size: 0.7em;
-}
 /* line 122, sass/_scorecard.scss */
+.scorecard-summary .categories > ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+/* line 128, sass/_scorecard.scss */
+.scorecard-summary .categories .fa-stack {
+  font-size: 0.5em;
+  margin-right: 15px;
+}
+/* line 134, sass/_scorecard.scss */
 .scorecard-summary .category {
   margin-bottom: 10px;
 }
