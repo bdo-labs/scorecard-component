@@ -11,16 +11,14 @@ describe('scorecard', function(){
 	beforeEach(module('scorecard'));
 	
 	var el,
-		scope,
-		httpBackend;
+		scope;
 
 	beforeEach(module(function ($provide) {
 		$provide.value('scorecardService', MockService);
 	}))
 
-	beforeEach(inject(function ($rootScope, $compile, $httpBackend){
+	beforeEach(inject(function ($rootScope, $compile){
 		scope = $rootScope.$new();
-		httpBackend = $httpBackend;
 	}))
 
 

@@ -1,36 +1,16 @@
 .scorecard {
-	h1, h2, h3, h4 {
-		> a {
-			text-decoration: none;
-			color: $strategi-color;
-		}
-	}
-
-	h2, h3, h4 {
-		> a {
-			color: black;
-		}
-	}
+	
 }
 
 // Full-size scorecard styles
 .scorecard-full {
-	position: relative;
-
-	.action-button {
-		&.add {
-			position: absolute;
-			top: 35px;
-			right: 20px;
-		}
-	}
-
+	
 	.category {
 		width: 50%;
 		display: inline-block;
 		vertical-align: top;
 
-		.table {			
+		table {			
 			width: 90%;
 			margin: 20px auto;
 		}
@@ -98,16 +78,6 @@
 
 // Summary-style scorecard
 .scorecard-summary {
-	position: relative;
-
-	.action-button {
-		&.edit {
-			position: absolute;
-			top: 35px;
-			right: 20px;
-		}
-	}
-
 	h3 {
 		margin-bottom: 0;
 	}

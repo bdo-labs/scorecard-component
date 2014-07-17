@@ -2,13 +2,13 @@
 
 	<h1>Målstyring</h1>
 
-	<div class="action-button add">
-		<span class="text">Legg til</span> <i class="fa fa-fw fa-plus"></i>
+	<div class="action-button main-action">
+		<i class="fa fa-fw fa-plus"></i>
 	</div>
 
 	<div class="categories">
 		<div ng-repeat="category in scorecard.categories | orderBy:'id'" class="category">
-			<table class="table">
+			<table class="row-separated-table">
 				<thead>
 					<tr>
 						<th width="10%">
