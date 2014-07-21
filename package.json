@@ -40,6 +40,6 @@
 		"karma": "^0.12.16",
 		"karma-browserifast": "^0.6.1",
 		"karma-jasmine": "^0.1.5",
-		"styles": "git+ssh://git@github.com:bdo-labs/styles.git#port-scorecard"
+		"styles": "git+ssh://git@github.com:bdo-labs/styles.git"
 	}
 }
