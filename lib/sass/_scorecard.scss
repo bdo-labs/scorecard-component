@@ -1,5 +1,5 @@
 .scorecard {
-	
+
 }
 
 // Full-size scorecard styles
@@ -10,7 +10,7 @@
 		display: inline-block;
 		vertical-align: top;
 
-		table {			
+		table {
 			width: 90%;
 			margin: 20px auto;
 		}
@@ -28,13 +28,13 @@
 				text-align: left;
 				vertical-align: bottom;
 			}
-			
+
 			th:first-child {
 				font-size: 125%;
 			}
-			
+
 		}
-		
+
 		td > .fa-stack {
 			font-size: 0.7em;
 		}
@@ -46,7 +46,7 @@
 		th:last-child, td:last-child {
 			color: grey;
 		}
-		
+
 	}
 }
 
@@ -55,19 +55,19 @@
 .scorecard-overview {
 
 	font-size: 14px;
-	
+
 	// Elements
 	.overview-stat {
 		display: inline-block;
 		text-align: center;
 		width: 49%;
-		
+
 		.visual {
 			font-size: 4em;
 			margin-left: auto;
 			margin-right: auto;
 		}
-		
+
 		.description {
 			font-size: 110%;
 			font-weight: normal;
@@ -78,7 +78,7 @@
 
 // Summary-style scorecard
 .scorecard-summary {
-	
+
 	h2 {
 		margin-bottom: 10px;
 	}
@@ -114,11 +114,11 @@
 
 	.categories {
 		> h2 {
-			margin-left: 35px;	
+			margin-left: 35px;
 		}
-		
+
 		float: left;
-		
+
 		> ul {
 			list-style: none;
 			padding-left: 0;
