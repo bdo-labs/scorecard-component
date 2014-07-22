@@ -1,7 +1,7 @@
 {
-	"name": "scorecard",
+	"name": "scorecardView",
 	"version": "0.0.0",
-	"description": "A scorecard module",
+	"description": "A scorecard view module",
 	"main": "lib/index.js",
 	"style": "lib/main.css",
 	"repository": "git://github.com/bdo-labs/scorecard.git",
