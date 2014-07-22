@@ -1,8 +1,8 @@
 
-scorecard
+scorecard-view
 ============
 
-A scorecard module
+A scorecard view component
 
 
 ## Installation
@@ -19,7 +19,7 @@ A scorecard module
 ## API
 
 ```Javascript
-    var scorecard = require('scorecard');
+    var scorecard = require('scorecardView');
 ```
 
 
