@@ -29,6 +29,7 @@ TESTS:=$(shell find lib -name '*.test.js')
 build: node_modules $(SRC)
 	mkdir -p $@
 	atomify
+	cp index.html $@/
 	@echo ""
 	@echo "    scorecard was built!"
 	@echo ""

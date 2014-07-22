@@ -3,13 +3,13 @@ describe('scorecard', function(){
 	var MockService = {
 		get: function () {
 			return {
-				
+
 			};
 		}
 	}
 
 	beforeEach(module('scorecard'));
-	
+
 	var el,
 		scope;
 

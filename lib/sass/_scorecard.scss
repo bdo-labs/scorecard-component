@@ -1,16 +1,16 @@
 .scorecard {
-	
+
 }
 
 // Full-size scorecard styles
 .scorecard-full {
-	
+
 	.category {
 		width: 50%;
 		display: inline-block;
 		vertical-align: top;
 
-		table {			
+		table {
 			width: 90%;
 			margin: 20px auto;
 		}
@@ -28,13 +28,13 @@
 				text-align: left;
 				vertical-align: bottom;
 			}
-			
+
 			th:first-child {
 				font-size: 125%;
 			}
-			
+
 		}
-		
+
 		td > .fa-stack {
 			font-size: 0.7em;
 		}
@@ -46,7 +46,7 @@
 		th:last-child, td:last-child {
 			color: grey;
 		}
-		
+
 	}
 }
 
@@ -55,19 +55,19 @@
 .scorecard-overview {
 
 	font-size: 14px;
-	
+
 	// Elements
 	.overview-stat {
 		display: inline-block;
 		text-align: center;
 		width: 49%;
-		
+
 		.visual {
 			font-size: 4em;
 			margin-left: auto;
 			margin-right: auto;
 		}
-		
+
 		.description {
 			font-size: 110%;
 			font-weight: normal;
@@ -78,44 +78,56 @@
 
 // Summary-style scorecard
 .scorecard-summary {
-	h3 {
-		margin-bottom: 0;
-	}
-	
-	.slogan {
-		clear: left;
-		padding-top: 20px;
-		font-size: medium;
-		color: $module-text-color;
+
+	h2 {
+		margin-bottom: 10px;
 	}
 
-	.overview-stat {
-		margin-left: 100px;
-		float: left;
+	.slogan {
+		clear: both;
+		padding-top: 20px;
+		font-size: medium;
+	}
+
+	.chart-component {
+		margin-right: 50px;
+		float: right;
 		text-align: center;
 
 		.chart {
-			height: 100px;
-			width: 100px;
+			height: 90px;
+			width: 90px;
 
 			/**
 			 * Using placeholder div until we choose
 			 * a chart library.
 			 */
 			border: solid 1px black;
+			border-radius: 50%;
+			background: $good-color;
+		}
+
+		.description {
+			margin-top: 1em;
 		}
 	}
 
 	.categories {
-		> h3 {
-			margin-left: 35px;	
+		> h2 {
+			margin-left: 35px;
 		}
-		
+
 		float: left;
-		font-size: medium;
+
+		> ul {
+			list-style: none;
+			padding-left: 0;
+			margin-top: 0;
+		}
 
 		.fa-stack {
-			font-size: 0.7em;
+			font-size: 0.5em;
+			margin-right: 15px;
 		}
 	}
 
