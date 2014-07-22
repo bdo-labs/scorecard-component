@@ -1,4 +1,4 @@
-describe('scorecard', function(){
+describe('scorecardView', function(){
 
 	var MockService = {
 		get: function () {
@@ -8,7 +8,7 @@ describe('scorecard', function(){
 		}
 	}
 
-	beforeEach(module('scorecard'));
+	beforeEach(module('scorecardView'));
 
 	var el,
 		scope;
@@ -23,7 +23,7 @@ describe('scorecard', function(){
 
 
 	function compileDirective(tpl){
-		if (!tpl) tpl = '<div scorecard-module scorecard-type="\'summary\'" scorecard-id="2"></div>';
+		if (!tpl) tpl = '<div scorecard-view scorecard-type="\'summary\'" scorecard-id="2"></div>';
 
 		inject(function ($compile) {
 			el = $compile(tpl)(scope)[0];
