@@ -7,7 +7,7 @@ A scorecard view component
 
 ## Installation
 
-    $ git clone https://github.com/bdo-labs/scorecard.git
+    $ git clone https://github.com/bdo-labs/scorecard-view.git
     $ make -s
 
 
@@ -19,7 +19,7 @@ A scorecard view component
 ## API
 
 ```Javascript
-    var scorecard = require('scorecardView');
+    var scorecard = require('scorecard-view');
 ```
 
 
