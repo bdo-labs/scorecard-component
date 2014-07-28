@@ -18,7 +18,7 @@ REPORTER?=spec
 # Sources
 #
 
-SRC:=$(shell find -E lib -regex '/^.*(html|js|json|css)$$/')
+SRC:=$(wildcard lib/*)
 TESTS:=$(shell find lib -name '*.test.js')
 
 
@@ -38,7 +38,7 @@ node_modules: package.json
 	npm install
 
 test: build
-	node_modules/karma/bin/karma start	
+	node_modules/karma/bin/karma start
 
 clean:
 	rm -fr build
