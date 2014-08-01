@@ -25,8 +25,8 @@
 							<i class="fa fa-fw status-color {{indicator.status}} {{indicator.trend | numToTrend | termToIcon | encircleIcon}}"></i>
 						</td>
 						<td><a ui-sref="strategy.scorecard.indicator({indicatorId: {{indicator.id}}})">{{indicator.name}}</a></td>
-						<td>{{indicator.value}}</td>
-						<td>{{indicator.target}}</td>
+						<td>{{getCurrent(indicator.measurements).value}}</td>
+						<td>{{getCurrent(indicator.goals).value}}</td>
 					</tr>
 
 				</tbody>
