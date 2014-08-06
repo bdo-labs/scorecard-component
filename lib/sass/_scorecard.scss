@@ -15,6 +15,14 @@
 			margin: 20px auto;
 		}
 
+		@media screen and (max-width: $screen-sm-max) {
+			width: 100%;
+
+			table {
+				width: 100%;
+			}
+		}
+
 		thead {
 			font-size: medium;
 

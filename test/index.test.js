@@ -1,26 +1,29 @@
 describe('scorecardView', function(){
 
+	var mockData = {},
+	deferred,
+	el,
+	scope;
+
 	var MockService = {
 		get: function () {
-			return {
-
-			};
+			return mockData;
 		}
 	}
 
-	beforeEach(module('scorecardView'));
-
-	var el,
-		scope;
-
-	beforeEach(module(function ($provide) {
-		$provide.value('scorecardService', MockService);
-	}))
-
-	beforeEach(inject(function ($rootScope, $compile){
-		scope = $rootScope.$new();
-	}))
-
+	beforeEach(function () {
+		module('scorecardView');
+		module(function ($provide) {
+			$provide.value('scorecardService', MockService);
+		});
+		inject(function ($rootScope, $compile){
+			scope = $rootScope.$new();
+		});
+		inject(function($q) {
+			deferred = $q.defer();
+			mockData.$promise = deferred.promise;
+		});
+	});
 
 	function compileDirective(tpl){
 		if (!tpl) tpl = '<div scorecard-view scorecard-type="\'full\'" scorecard-id="2"></div>';
@@ -28,6 +31,8 @@ describe('scorecardView', function(){
 		inject(function ($compile) {
 			el = $compile(tpl)(scope)[0];
 		})
+		scope.$digest();
+		deferred.resolve(mockData);
 		scope.$digest();
 	}
 
