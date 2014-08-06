@@ -9,55 +9,65 @@
   width: 90%;
   margin: 20px auto;
 }
-/* line 18, sass/_scorecard.scss */
+@media screen and (max-width: 991px) {
+  /* line 8, sass/_scorecard.scss */
+  .scorecard-full .category {
+    width: 100%;
+  }
+  /* line 21, sass/_scorecard.scss */
+  .scorecard-full .category table {
+    width: 100%;
+  }
+}
+/* line 26, sass/_scorecard.scss */
 .scorecard-full .category thead {
   font-size: medium;
 }
-/* line 21, sass/_scorecard.scss */
+/* line 29, sass/_scorecard.scss */
 .scorecard-full .category thead .name {
   font-size: 1.3em;
   color: black;
 }
-/* line 26, sass/_scorecard.scss */
+/* line 34, sass/_scorecard.scss */
 .scorecard-full .category thead th {
   font-weight: normal;
   text-align: left;
   vertical-align: bottom;
 }
-/* line 32, sass/_scorecard.scss */
+/* line 40, sass/_scorecard.scss */
 .scorecard-full .category thead th:first-child {
   font-size: 125%;
 }
-/* line 38, sass/_scorecard.scss */
+/* line 46, sass/_scorecard.scss */
 .scorecard-full .category td > .fa-stack {
   font-size: 0.7em;
 }
-/* line 42, sass/_scorecard.scss */
+/* line 50, sass/_scorecard.scss */
 .scorecard-full .category th:first-child, .scorecard-full .category td:first-child {
   text-align: center;
 }
-/* line 46, sass/_scorecard.scss */
+/* line 54, sass/_scorecard.scss */
 .scorecard-full .category th:last-child, .scorecard-full .category td:last-child {
   color: grey;
 }
 
-/* line 55, sass/_scorecard.scss */
+/* line 63, sass/_scorecard.scss */
 .scorecard-overview {
   font-size: 14px;
 }
-/* line 60, sass/_scorecard.scss */
+/* line 68, sass/_scorecard.scss */
 .scorecard-overview .overview-stat {
   display: inline-block;
   text-align: center;
   width: 49%;
 }
-/* line 65, sass/_scorecard.scss */
+/* line 73, sass/_scorecard.scss */
 .scorecard-overview .overview-stat .visual {
   font-size: 4em;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 71, sass/_scorecard.scss */
+/* line 79, sass/_scorecard.scss */
 .scorecard-overview .overview-stat .description {
   font-size: 110%;
   font-weight: normal;
