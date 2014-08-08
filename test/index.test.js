@@ -1,6 +1,8 @@
 describe('scorecardView', function(){
 
-	var mockData = {},
+	var mockData = {
+		indicators: []
+	},
 	deferred,
 	el,
 	scope;
@@ -48,10 +50,6 @@ describe('scorecardView', function(){
 
 		it('should choose the right scorecard type', function () {
 			expect(el.firstElementChild.classList.contains('scorecard-full')).toBe(true);
-		});
-
-		it('should note the scorecardId', function () {
-			expect(angular.element(el).isolateScope().scorecardId).toEqual(2);
 		});
 	});
 });
