@@ -1,45 +1,46 @@
 {
-	"name": "scorecard-view",
-	"version": "0.0.0",
-	"description": "A scorecard view module",
-	"main": "lib/index.js",
-	"style": "lib/main.css",
-	"repository": "git://github.com/bdo-labs/scorecard-view.git",
-	"license": "MIT",
-	"dependencies": {
-		"services": "git+https://edbdo.visualstudio.com/DefaultCollection/BDO%20Labs/_git/Services",
-		"filters": "git+ssh://git@github.com:bdo-labs/filters.git"
-	},
-	"scripts": {
-		"test": "karma start"
-	},
-	"atomify": {
-		"js": {
-			"entry": "lib/index.js",
-			"output": "build/build.js"
-		},
-		"css": {
-			"entry": "index.css",
-			"output": "build/bundle.css",
-			"assets": {
-				"dest": "build/assets/",
-				"prefix": "assets/"
-			}
-		}
-	},
-	"browserify": {
-		"transform": [
-			"partialify"
-		]
-	},
-	"devDependencies": {
-		"angular": "^1.2.18",
-		"atomify": "^3.1.2",
-		"partialify": "^3.1.1",
-		"browserify": "^4.2.0",
-		"karma": "^0.12.16",
-		"karma-browserifast": "^0.6.1",
-		"karma-jasmine": "^0.1.5",
-		"styles": "git+ssh://git@github.com:bdo-labs/styles.git"
-	}
+  "name": "scorecard-view",
+  "version": "0.0.0",
+  "description": "A scorecard view module",
+  "main": "lib/index.js",
+  "style": "lib/main.css",
+  "repository": "git://github.com/bdo-labs/scorecard-view.git",
+  "license": "MIT",
+  "scripts": {
+    "build": "atomify",
+    "test": "karma start"
+  },
+  "atomify": {
+    "js": {
+      "entry": "lib/index.js",
+      "output": "build/build.js"
+    },
+    "css": {
+      "entry": "index.css",
+      "output": "build/bundle.css"
+    },
+    "assets": {
+      "dest": "build/assets/",
+      "prefix": "assets/"
+    }
+  },
+  "browserify": {
+    "transform": [
+      "partialify"
+    ]
+  },
+  "dependencies": {
+    "services": "git+https://edbdo.visualstudio.com/DefaultCollection/BDO%20Labs/_git/Services",
+    "filters": "bdo-labs/filters"
+  },
+  "devDependencies": {
+    "angular": "^1.2.18",
+    "atomify": "^3.1.2",
+    "partialify": "^3.1.1",
+    "browserify": "^4.2.0",
+    "karma": "^0.12.16",
+    "karma-browserifast": "^0.6.1",
+    "karma-jasmine": "^0.1.5",
+    "styles": "bdo-labs/styles"
+  }
 }

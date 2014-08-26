@@ -1,41 +1,38 @@
+
+<!-- scorecard-view -->
 <section class="primary-box scorecard scorecard-full">
+  <h1>Status KPI</h1>
 
-	<h1>Målstyring</h1>
+  <a href="#" class="action-btn action-main">
+    <i class="fa fa-fw fa-plus"></i>
+  </a>
 
-	<div class="action-button main-action">
-		<i class="fa fa-fw fa-plus"></i>
-	</div>
-
-	<div class="categories">
-		<div ng-repeat="group in indicatorGroups | orderBy:'category.id'" class="category">
-			<table class="row-separated-table">
-				<thead>
-					<tr>
-						<th width="10%">
-							<i class="fa fa-fw {{group.trend | numToTrend | termToIcon}}"></i>
-						</th>
-						<th width="50%" class="name">{{group.category.name}}</th>
-						<th width="20%">Verdi</th>
-						<th width="20%">Mål</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr data-ng-repeat="indicator in group.indicators | orderBy:'name'">
-						<td>
-							<i class="fa fa-fw status-color {{indicator.status}} {{indicator.trend | numToTrend | termToIcon | encircleIcon}}"></i>
-						</td>
-						<td><a ui-sref="strategy.scorecard.indicator({indicatorId: '{{indicator.slug}}'})">{{indicator.name}}</a></td>
-						<td>{{getCurrent(indicator, 'measurements').value |
-							separatedNumber
-							}}{{indicator.unit}}</td>
-						<td>{{getCurrent(indicator, 'goals').value |
-							separatedNumber
-							}}{{indicator.unit}}</td>
-					</tr>
-
-				</tbody>
-			</table>
-		</div>
-	</div>
-
+  <div class="categories">
+    <div ng-repeat="group in indicatorGroups | orderBy:'category.id'" class="category">
+      <table class="row-separated-table">
+        <thead>
+          <tr>
+            <th width="10%">
+              <i class="fa fa-fw {{group.trend | numToTrend | termToIcon}}"></i>
+            </th>
+            <th width="50%" class="name">{{group.category.name}}</th>
+            <th width="20%">Verdi</th>
+            <th width="20%">Mål</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-ng-repeat="indicator in group.indicators | orderBy:'name'">
+            <td>
+              <i class="fa fa-fw status-color {{indicator.status}} {{indicator.trend | numToTrend | termToIcon | encircleIcon}}"></i>
+            </td>
+            <td><a ui-sref="strategy.scorecard.indicator({indicatorId: '{{indicator.slug}}'})">{{indicator.name}}</a></td>
+            <td>{{getCurrent(indicator, 'measurements').value | separatedNumber }}{{indicator.unit}}</td>
+            <td>{{getCurrent(indicator, 'goals').value | separatedNumber }}{{indicator.unit}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </section>
+<!-- End scorecard-view -->
+

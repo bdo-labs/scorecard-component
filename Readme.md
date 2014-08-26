@@ -7,21 +7,13 @@ A scorecard view component
 
 ## Installation
 
-    $ git clone https://github.com/bdo-labs/scorecard-view.git
-    $ make -s
+    $ npm install bdo-labs/scorecard-view
+    $ npm run build
 
 
 ## Running tests
 
-    $ make -s test
-
-
-## API
-
-```Javascript
-    var scorecard = require('scorecard-view');
-```
-
+    $ npm test
 
 
 ## License

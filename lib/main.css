@@ -3,12 +3,10 @@
   width: 50%;
   display: inline-block;
   vertical-align: top;
+  padding: 1em;
+  box-sizing: border-box;
 }
-/* line 13, sass/_scorecard.scss */
-.scorecard-full .category table {
-  width: 90%;
-  margin: 20px auto;
-}
+
 @media screen and (max-width: 991px) {
   /* line 8, sass/_scorecard.scss */
   .scorecard-full .category {
